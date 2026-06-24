@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="mn">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Теннис болзоо · Урилга</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <title>Court tennis</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet" />
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
       font-family: 'Inter', sans-serif;
-      background: #f5f5f0;
+      background: #e27deb;
       min-height: 100vh;
       display: flex;
       align-items: center;
@@ -19,14 +26,14 @@
     }
 
     .card {
-      background: #ffffff;
-      border: 1px solid #e5e5e0;
+      background: #db9bee;
+      border: 1px solid #4a90e0;
       border-radius: 16px;
       padding: 2.5rem 2rem;
       max-width: 420px;
       width: 100%;
       text-align: center;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
     }
 
     .emoji-big {
@@ -37,13 +44,20 @@
     }
 
     @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-8px);
+      }
     }
 
     .subtitle {
       font-size: 13px;
-      color: #888;
+      color: #101010;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       margin-bottom: 0.75rem;
@@ -60,12 +74,12 @@
 
     .title em {
       font-style: italic;
-      color: #1D9E75;
+      color: #7a0fac;
     }
 
     .desc {
       font-size: 14px;
-      color: #666;
+      color: #100f0f;
       line-height: 1.7;
       margin: 1.25rem 0 2rem;
     }
@@ -88,20 +102,28 @@
       transition: transform 0.15s, background 0.15s;
     }
 
-    .btn:hover { background: #f5f5f0; }
-    .btn:active { transform: scale(0.97); }
-
-    .btn-yes {
-      background: #1D9E75;
-      color: #fff;
-      border-color: #1D9E75;
+    .btn:hover {
+      background: #f5f5f0;
     }
 
-    .btn-yes:hover { background: #0F6E56; border-color: #0F6E56; }
+    .btn:active {
+      transform: scale(0.97);
+    }
+
+    .btn-yes {
+      background: #d442c3;
+      color: #79009d;
+      border-color: #edbfc6;
+    }
+
+    .btn-yes:hover {
+      background: #7d10a8;
+      border-color: #921390;
+    }
 
     .error-msg {
       font-size: 13px;
-      color: #999;
+      color: #090909;
       margin-top: 0.75rem;
       min-height: 20px;
     }
@@ -112,8 +134,15 @@
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to   { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .result-title {
@@ -139,7 +168,7 @@
 
     .detail-label {
       font-size: 11px;
-      color: #999;
+      color: #1d1c1c;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       margin-bottom: 4px;
@@ -153,22 +182,22 @@
 
     .closing {
       font-size: 14px;
-      color: #888;
+      color: #0c0c0c;
       line-height: 1.6;
     }
   </style>
 </head>
+
 <body>
   <div class="card">
 
     <!-- Урилга -->
     <div id="invite">
       <span class="emoji-big">🎾</span>
-      <p class="subtitle">Онцгой урилга</p>
-      <h1 class="title">Чи надтай <em>теннис</em> тоглоход гарах уу?</h1>
+      <p class="subtitle">Надад нэг санал байна 👉👈</p>
+      <h1 class="title">Чи надтай <em>теннис</em> тоглохыг зөвшөөрч байна уу?</h1>
       <p class="desc">
-        Кортон дээр хоёулаа тоглоод, ялагчаа шалгаад —<br>
-        тэр мөчийг хамт туулъя гэж бодлоо. 🌿
+        Кортон дээр хоёулаа тоглоод, намайг дасгалжуулаарай. 🤭
       </p>
       <div class="btn-group">
         <button class="btn btn-yes" onclick="handleYes()">Тийм ✨</button>
@@ -180,7 +209,7 @@
     <!-- Үр дүн -->
     <div class="result" id="result">
       <span style="font-size:2.5rem; display:block; margin-bottom:1rem;">🥰</span>
-      <p class="result-title">Баярлалаа! Болзоо маань ингэж болоо:</p>
+      <p class="result-title">Баярлалаа! Товолсон цагтаа уулзацгаая:</p>
       <div class="detail-grid">
         <div class="detail-box">
           <p class="detail-label">📅 Огноо</p>
@@ -202,12 +231,12 @@
 
   <script>
     // ✏️ ЭНЭ ХЭСГИЙГ ӨӨРЧИЛ
-    const DATE  = "8 сарын 25";          // Огноо
-    const TIME  = "Өглөөний 10:00";      // Цаг
-    const PLACE = "Теннисний корт";       // Газар
+    const DATE = "9 сарын 12";          // Огноо
+    const TIME = "Өглөөний 10:00";      // Цаг
+    const PLACE = "Цэцэрлэгт хүрээлэн";       // Газар
 
-    document.getElementById('detailDate').textContent  = DATE;
-    document.getElementById('detailTime').textContent  = TIME;
+    document.getElementById('detailDate').textContent = DATE;
+    document.getElementById('detailTime').textContent = TIME;
     document.getElementById('detailPlace').textContent = PLACE;
 
     let noCount = 0;
@@ -224,9 +253,9 @@
 
       const msgs = [
         'Аль нэгийг нь сонгоорой 🙈',
-        'Тийм гэж дахин бодоорой 😏',
-        'Зөв товчийг дар... 😄',
-        'Үгүй гэж байхгүй шүү! 🎾',
+        'Хм… дахиад нэг бодоод үз 😅',
+        'Зүгээр л «Тийм» дээрээ дараач 💞',
+        'Намайг гомдоохгүй биз дээ? 🎾',
       ];
 
       err.textContent = msgs[Math.min(noCount - 1, msgs.length - 1)];
@@ -237,4 +266,5 @@
     }
   </script>
 </body>
+
 </html>
