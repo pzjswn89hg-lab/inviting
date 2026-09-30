@@ -193,11 +193,11 @@
 
     <!-- Урилга -->
     <div id="invite">
-      <span class="emoji-big">🎾</span>
+      <span class="emoji-big">😽</span>
       <p class="subtitle">Надад нэг санал байна 👉👈</p>
-      <h1 class="title">Чи надтай <em>теннис</em> тоглохыг зөвшөөрч байна уу?</h1>
+      <h1 class="title">Чи надтай <em>болзоонд</em> явахыг зөвшөөрч байна уу?</h1>
       <p class="desc">
-        Кортон дээр хоёулаа тоглоод, намайг дасгалжуулаарай. 🤭
+        Хамтдаа цагийг хөгжилтэй өнгрөөе. 🤭
       </p>
       <div class="btn-group">
         <button class="btn btn-yes" onclick="handleYes()">Тийм ✨</button>
@@ -209,7 +209,7 @@
     <!-- Үр дүн -->
     <div class="result" id="result">
       <span style="font-size:2.5rem; display:block; margin-bottom:1rem;">🥰</span>
-      <p class="result-title">Баярлалаа! Товолсон цагтаа уулзацгаая:</p>
+      <p class="result-title">Баярлалаа! Тэвчээртэй хүлээж байгаарай:</p>
       <div class="detail-grid">
         <div class="detail-box">
           <p class="detail-label">📅 Огноо</p>
@@ -231,9 +231,9 @@
 
   <script>
     // ✏️ ЭНЭ ХЭСГИЙГ ӨӨРЧИЛ
-    const DATE = "9 сарын 12";          // Огноо
-    const TIME = "Өглөөний 10:00";      // Цаг
-    const PLACE = "Цэцэрлэгт хүрээлэн";       // Газар
+    const DATE = "10 сарын 1";          // Огноо
+    const TIME = "Өдрийн 13:30";      // Цаг
+    const PLACE = "Төв номын сан";       // Газар
 
     document.getElementById('detailDate').textContent = DATE;
     document.getElementById('detailTime').textContent = TIME;
@@ -255,7 +255,7 @@
         'Аль нэгийг нь сонгоорой 🙈',
         'Хм… дахиад нэг бодоод үз 😅',
         'Зүгээр л «Тийм» дээрээ дараач 💞',
-        'Намайг гомдоохгүй биз дээ? 🎾',
+        'Намайг гомдоохгүй биз дээ? 🥺',
       ];
 
       err.textContent = msgs[Math.min(noCount - 1, msgs.length - 1)];
